@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void all_clear(View view) {
         display.setText("");
+        previousCalculation.setText("");
     }
     public void backspaceBTN(View view) {
         int cursorPos = display.getSelectionStart();
