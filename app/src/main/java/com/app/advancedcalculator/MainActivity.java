@@ -1,10 +1,16 @@
 package com.app.advancedcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import org.mariuszgromada.math.mxparser.*;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -18,6 +24,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    private Button button;
     private TextView previousCalculation;
     private EditText display;
 
@@ -25,6 +33,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        button = (Button) findViewById(R.id.double_summationBTN);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity2();
+            }
+        });
+
+        button = (Button) findViewById(R.id.double_productBTN);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity3();
+            }
+        });
 
         previousCalculation = findViewById(R.id.previousCalculationView);
 
@@ -35,6 +59,16 @@ public class MainActivity extends AppCompatActivity {
             if (getString(R.string.display).equals(display.getText().toString()))
                 display.setText(" ");
         });
+    }
+
+    public void openActivity2() {
+        Intent intent = new Intent(this, MainActivity2.class);
+        startActivity(intent);
+    }
+
+    public void openActivity3() {
+        Intent intent = new Intent(this, MainActivity3.class);
+        startActivity(intent);
     }
 
     private void updateText (String strToAdd) {
@@ -235,18 +269,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void summation_notationBTN(View view) {
-        updateText("∑()");
+        updateText("∑");
     }
 
-    public void double_summationBTN(View view) {
-
-    }
     public void product_notationBTN(View view) {
-        updateText("Π()");
+        updateText("Π");
     }
 
-    public void double_productBTN(View view) {
-
     }
 
-}
