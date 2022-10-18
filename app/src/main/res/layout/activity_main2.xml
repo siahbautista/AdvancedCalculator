@@ -8,6 +8,25 @@
     tools:context=".MainActivity2">
 
 
+    <Button
+        android:id="@+id/clear"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_weight="1"
+        android:background="@drawable/circle_btn"
+        android:backgroundTint="@color/orange"
+        android:onClick="clearBTN"
+        android:text="CLEAR"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.333" />
+
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"

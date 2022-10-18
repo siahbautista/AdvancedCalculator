@@ -126,5 +126,13 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
 
+    public void clearBTN(View view) {
+        etNum1.setText("");
+        etNum2.setText("");
+        etNum3.setText("");
+        etNum4.setText("");
+        tvResult.setText("");
+    }
+
 
 }
