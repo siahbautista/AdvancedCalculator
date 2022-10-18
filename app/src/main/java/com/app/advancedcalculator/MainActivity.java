@@ -6,15 +6,27 @@ import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
+
+/* Calculator Made By BETAMIN SYNC (BSCS - 2A)
+    Bautista, Mahasiah
+    Cuya, Christian Jay
+    Ebe, Rey John
+    Orca, Andrea Anne
+    Paclibar, Josh Earl Conrad
+ */
 
 public class MainActivity extends AppCompatActivity {
 
+    private TextView previousCalculation;
     private EditText display;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        previousCalculation = findViewById(R.id.previousCalculationView);
 
         display = findViewById(R.id.input);
         display.setShowSoftInputOnFocus(false);
@@ -100,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void equalBTN(View view) {
         String userExp = display.getText().toString();
+
+        previousCalculation.setText(userExp);
 
         userExp = userExp.replaceAll("÷", "/");
         userExp = userExp.replaceAll("×", "*");
