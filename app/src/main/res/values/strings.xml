@@ -27,10 +27,13 @@
     <string name="exponent">^</string>
     <string name="parenthesis">( )</string>
     <string name="factorial">x!</string>
-    <string name="modulo">%</string>
+    <string name="percent">%</string>
+    <string name="modulo">Mod</string>
+    <string name="fourth_root">∜</string>
     <string name="cube_root">∛</string>
     <string name="square_root">√</string>
     <string name="logarithm">log</string>
+    <string name="eulers">ⅇ</string>
     <string name="permutation">nPr</string>
     <string name="combination">nCr</string>
     <string name="absolute">Abs</string>
@@ -42,6 +45,8 @@
     <string name="x">x</string>
     <string name="y">y</string>
     <string name="comma">,</string>
+    <string name="fraction">_</string>
+    <string name="space">SPACE</string>
 
 
     <!--Double's-->

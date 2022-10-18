@@ -88,6 +88,72 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/moduloBTN"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_btn"
+                android:backgroundTint="@color/darkest_green"
+                android:onClick="moduloBTN"
+                android:text="@string/modulo" />
+
+            <Button
+                android:id="@+id/percentBTN"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_btn"
+                android:backgroundTint="@color/darkest_green"
+                android:onClick="percentBTN"
+                android:text="@string/percent" />
+
+            <Button
+                android:id="@+id/fractionBTN"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_btn"
+                android:backgroundTint="@color/darkest_green"
+                android:onClick="fractionBTN"
+                android:text="@string/fraction" />
+
+            <Button
+                android:id="@+id/commaBTN"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_btn"
+                android:backgroundTint="@color/darkest_green"
+                android:onClick="commaBTN"
+                android:text="@string/comma" />
+
+            <Button
+                android:id="@+id/spaceBTN"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_btn"
+                android:backgroundTint="@color/darkest_green"
+                android:onClick="spaceBTN"
+                android:text="@string/space" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
                 android:id="@+id/logBTN"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
@@ -100,7 +166,7 @@
                 android:text="@string/logarithm" />
 
             <Button
-                android:id="@+id/log_b2BTN"
+                android:id="@+id/eulersnumber"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -108,8 +174,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle_btn"
                 android:backgroundTint="@color/darkest_green"
-                android:onClick="commaBTN"
-                android:text="@string/comma" />
+                android:onClick="eulersBTN"
+                android:text="@string/eulers" />
 
             <Button
                 android:id="@+id/roundBTN"
@@ -286,7 +352,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/moduloBTN"
+                android:id="@+id/fourth_rootBTN"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -294,8 +360,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle_btn"
                 android:backgroundTint="@color/darkest_green"
-                android:onClick="moduloBTN"
-                android:text="@string/modulo" />
+                android:onClick="fourth_rootBTN"
+                android:text="@string/fourth_root" />
 
             <Button
                 android:id="@+id/sevenBTN"

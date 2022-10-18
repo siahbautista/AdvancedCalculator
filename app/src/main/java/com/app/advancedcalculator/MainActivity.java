@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private void updateText (String strToAdd) {
         String oldStr = display.getText().toString();
         int cursorPos = display.getSelectionStart();
+
         String leftStr = oldStr.substring(0, cursorPos);
         String rightStr = oldStr.substring(cursorPos);
         if (getString(R.string.display).equals(display.getText().toString())) {
@@ -144,12 +145,31 @@ public class MainActivity extends AppCompatActivity {
         display.setSelection(cursorPos + 1);
     }
 
+
+    public void spaceBTN(View view) {
+        updateText(" ");
+    }
+
+    public void fractionBTN(View view) {
+        updateText("_");
+    }
+
     public void factorialBTN(View view) {
         updateText("!");
     }
+
     public void moduloBTN(View view) {
-        updateText("#");
+        updateText("mod");
     }
+
+    public void percentBTN(View view) {
+        updateText("%");
+    }
+
+    public void fourth_rootBTN(View view) {
+        updateText("∜");
+    }
+
     public void cube_rootBTN(View view) {
         updateText("∛");
     }
@@ -161,41 +181,41 @@ public class MainActivity extends AppCompatActivity {
         updateText(",");
     }
 
+    public void eulersBTN(View view) {
+        updateText("ⅇ");
+    }
+
     public void logBTN(View view) {
-        updateText("log()");
+        updateText("log");
     }
 
     public void nprBTN(View view) {
-        updateText("nPk()");
+        updateText("nPk");
     }
 
     public void ncrBTN(View view) {
-        updateText("nCk()");
-    }
-
-    public void abstractBTN(View view) {
-        updateText("√");
+        updateText("nCk");
     }
 
     public void roundBTN(View view) {
-        updateText("round()");
+        updateText("round");
     }
 
     public void absoluteBTN(View view) {
-        updateText("abs()");
+        updateText("abs");
     }
 
     public void ceilBTN(View view) {
-        updateText("ceil()");
+        updateText("ceil");
     }
     public void flrBTN(View view) {
-        updateText("floor()");
+        updateText("floor");
     }
     public void maxBTN(View view) {
-        updateText("max()");
+        updateText("max");
     }
     public void minBTN(View view) {
-        updateText("min()");
+        updateText("min");
     }
     public void xBTN(View view) {
         updateText("x");
@@ -205,14 +225,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void summation_notationBTN(View view) {
-        updateText("sum()");
+        updateText("∑()");
     }
 
     public void double_summationBTN(View view) {
 
     }
     public void product_notationBTN(View view) {
-        updateText("prod()");
+        updateText("Π()");
     }
 
     public void double_productBTN(View view) {
