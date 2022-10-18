@@ -21,26 +21,21 @@ public class MainActivity extends AppCompatActivity {
 
         display.setOnClickListener(v -> {
             if (getString(R.string.display).equals(display.getText().toString()))
-                display.setText("");
+                display.setText(" ");
         });
     }
 
     private void updateText (String strToAdd) {
         String oldStr = display.getText().toString();
-        int cursorPos = display.getSelectionStart();
 
+        int cursorPos = display.getSelectionStart();
         String leftStr = oldStr.substring(0, cursorPos);
         String rightStr = oldStr.substring(cursorPos);
-        if (getString(R.string.display).equals(display.getText().toString())) {
-            display.setText(strToAdd);
-            display.setSelection(cursorPos + 1);
-        }
-        else{
+
             display.setText(String.format("%s%s%s", leftStr, strToAdd, rightStr));
-            display.setSelection(cursorPos + 1);
+            display.setSelection(cursorPos + strToAdd.length());
         }
 
-    }
 
     public void zeroBTN(View view) {
         updateText("0");
