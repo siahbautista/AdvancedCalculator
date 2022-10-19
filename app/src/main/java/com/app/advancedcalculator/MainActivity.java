@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button;
     private TextView previousCalculation;
     private EditText display;
+    int intResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
 
         display.setText(result);
         display.setSelection(result.length());
+
     }
 
     public void exponentBTN(View view) {
@@ -195,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void fractionBTN(View view) {
-        updateText("_");
+        updateText("floor(round(");
     }
 
     public void factorialBTN(View view) {
