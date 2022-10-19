@@ -623,7 +623,7 @@
         android:id="@+id/previousCalculationView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:textColor="@color/orange"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@id/input"
         app:layout_constraintEnd_toEndOf="parent"
