@@ -11,8 +11,6 @@ public class MainActivity3 extends AppCompatActivity {
     TextView tvResult;
     EditText etNum1, etNum2, etNum3, etNum4;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +24,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     }
 
+    // Function for summation of x + y
     public void addNumber(View v) {
 
         double n1, n2, n3, n4, result = 1;
@@ -46,6 +45,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     }
 
+    // Function for summation of x - y
     public void subtractNumber(View v) {
 
         double n1, n2, n3, n4, result = 1;
@@ -66,6 +66,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     }
 
+    // Function for summation of x * y
     public void multiplyNumber(View v) {
 
         double n1, n2, n3, n4, result = 1;
@@ -86,6 +87,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     }
 
+    // Function for summation of x / y
     public void divideNumber(View v) {
 
         double n1, n2, n3, n4, result = 1;
@@ -106,6 +108,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     }
 
+    // Function for summation of x ^ y
     public void powerNumber(View v) {
 
         double n1, n2, n3, n4, result = 1;
@@ -126,6 +129,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     }
 
+    // Construct for clearing all entered values
     public void clearBTN(View view) {
         etNum1.setText("");
         etNum2.setText("");

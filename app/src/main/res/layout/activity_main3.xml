@@ -7,7 +7,7 @@
     android:background="@color/darker_green"
     tools:context=".MainActivity3">
 
-
+    <!-- Buttons layout -->
     <Button
         android:id="@+id/clear"
         style="@style/Widget.AppCompat.Button.Borderless"
@@ -112,6 +112,7 @@
 
     </TableLayout>
 
+    <!-- Layout for user input variables -->
     <EditText
         android:id="@+id/etNum1"
         android:layout_width="0dp"
@@ -184,6 +185,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
 
+    <!-- Display for result -->
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="wrap_content"

@@ -1,11 +1,7 @@
 package com.app.advancedcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import org.mariuszgromada.math.mxparser.*;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
@@ -22,19 +18,20 @@ import android.widget.TextView;
     Paclibar, Josh Earl Conrad
  */
 
-public class MainActivity extends AppCompatActivity {
 
+// Java Main Interface
+public class MainActivity extends AppCompatActivity {
 
     private Button button;
     private TextView previousCalculation;
     private EditText display;
-    int intResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Double Summation button linked to the Double Summation tab
         button = (Button) findViewById(R.id.double_summationBTN);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Double Product button linked to the Double Product tab
         button = (Button) findViewById(R.id.double_productBTN);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +51,10 @@ public class MainActivity extends AppCompatActivity {
 
         previousCalculation = findViewById(R.id.previousCalculationView);
 
+        // Connect the display from interface
         display = findViewById(R.id.input);
+
+        // Disable keyboard
         display.setShowSoftInputOnFocus(false);
 
         display.setOnClickListener(v -> {
@@ -62,16 +63,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // Opens new tab for the interface of Double Summation
     public void openActivity2() {
         Intent intent = new Intent(this, MainActivity2.class);
         startActivity(intent);
     }
 
+    // Opens new tab for the interface of Double Product
     public void openActivity3() {
         Intent intent = new Intent(this, MainActivity3.class);
         startActivity(intent);
     }
 
+    // Function to input expression to display and update cursor position
     private void updateText (String strToAdd) {
         String oldStr = display.getText().toString();
 
@@ -87,38 +91,51 @@ public class MainActivity extends AppCompatActivity {
     public void zeroBTN(View view) {
         updateText("0");
     }
+
     public void oneBTN(View view) {
         updateText("1");
     }
+
     public void twoBTN(View view) {
         updateText("2");
     }
+
     public void threeBTN(View view) {
         updateText("3");
     }
+
     public void fourBTN(View view) {
         updateText("4");
     }
+
     public void fiveBTN(View view) {
         updateText("5");
     }
+
     public void sixBTN(View view) {
         updateText("6");
     }
+
     public void sevenBTN(View view) {
         updateText("7");
     }
+
     public void eightBTN(View view) {
         updateText("8");
     }
+
     public void nineBTN(View view) {
         updateText("9");
     }
 
+
+    // Clearing of the EditText display and previous calculation view
     public void all_clear(View view) {
         display.setText("");
         previousCalculation.setText("");
     }
+
+    // Delete button construct
     public void backspaceBTN(View view) {
         int cursorPos = display.getSelectionStart();
         int textLen = display.getText().length();
@@ -130,22 +147,35 @@ public class MainActivity extends AppCompatActivity {
             display.setSelection(cursorPos - 1);
         }
     }
+
+
+
     public void addBTN(View view) {
         updateText("+");
     }
+
     public void minusBTN(View view) {
         updateText("-");
     }
+
     public void multiplyBTN(View view) {
         updateText("*");
     }
+
     public void divideBTN(View view) {
         updateText("÷");
     }
+
     public void pointBTN(View view) {
         updateText(".");
     }
 
+    public void exponentBTN(View view) {
+        updateText("^");
+    }
+
+
+    // Expression calculation using Math parser library
     public void equalBTN(View view) {
         String userExp = display.getText().toString();
 
@@ -163,10 +193,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void exponentBTN(View view) {
-        updateText("^");
-    }
-
+    // closed and open parenthesis logic
     public void parenthesisBTN(View view) {
         int cursorPos = display.getSelectionStart();
         int openPar = 0;
@@ -219,6 +246,7 @@ public class MainActivity extends AppCompatActivity {
     public void cube_rootBTN(View view) {
         updateText("∛");
     }
+
     public void square_rootBTN(View view) {
         updateText("√");
     }
@@ -254,18 +282,23 @@ public class MainActivity extends AppCompatActivity {
     public void ceilBTN(View view) {
         updateText("ceil");
     }
+
     public void flrBTN(View view) {
         updateText("floor");
     }
+
     public void maxBTN(View view) {
         updateText("max");
     }
+
     public void minBTN(View view) {
         updateText("min");
     }
+
     public void xBTN(View view) {
         updateText("x");
     }
+
     public void yBTN(View view) {
         updateText("y");
     }
